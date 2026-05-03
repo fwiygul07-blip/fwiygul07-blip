@@ -11,8 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: getbadge
-        run: curl https://tryhackme-badges.s3.amazonaws.com/fwiygul07.png -o thm-badge.png
-
+        run: curl -H "User-Agent: Mozilla/5.0" https://tryhackme-badges.s3.amazonaws.com/fwiygul07.png -o thm-badge.png
+      
       - name: commitandpush
         run: |
           git config --global user.name 'github-actions'
