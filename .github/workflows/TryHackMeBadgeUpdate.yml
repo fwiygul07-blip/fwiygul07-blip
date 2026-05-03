@@ -14,7 +14,8 @@ jobs:
         run: curl https://tryhackme-badges.s3.amazonaws.com/fwiygul07.png -o thm-badge.png
 
       - name: commitandpush
-        run: git config --global user.name 'github-actions'
+        run: |
+          git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
           git add thm-badge.png
           git commit -m "Update TryHackMe Badge" || exit 0
