@@ -15,7 +15,7 @@ jobs:
 
       - name: getbadge
         run: |
-          curl -H "User-Agent: Mozilla/5.0" https://tryhackme-badges.s3.amazonaws.com/fwiygul07.png -o thm-badge.png
+          'curl -L -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)" -H "Referer: https://tryhackme.com/" https://tryhackme-badges.s3.amazonaws.com/fwiygul07.png -o thm-badge.png'
 
       - name: commitandpush
         run: |
